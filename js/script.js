@@ -1,81 +1,173 @@
- // Toggle Mobile Menu
-        const hamburger = document.querySelector(".hamburger");
-        const navMenu = document.querySelector(".nav-menu");
+document.addEventListener('DOMContentLoaded', () => {
+    // Current Date
+    const dateElement = document.getElementById('currentDate');
+    if (dateElement) {
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        dateElement.textContent = new Date().toLocaleDateString('en-US', options);
+    }
 
-        hamburger.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-        });
+    // Theme Toggle
+    const themeToggle = document.getElementById('themeToggle');  
+    const body = document.body;
 
-        document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
-            hamburger.classList.remove("active");
-            navMenu.classList.remove("active");
-        }));
+    if (themeToggle) {
+        // Check for saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-mode');
+            const icon = themeToggle.querySelector('i');
+            if (icon) icon.classList.replace('fa-sun', 'fa-moon');
+        }
 
-        // Theme Toggle
-        const themeToggle = document.getElementById("themeToggle");
-        themeToggle.addEventListener("change", () => {
-            document.body.classList.toggle("dark-mode");
-        });
-
-        // Back to Top Button
-        const backToTopButton = document.getElementById("backToTop");
-
-        window.addEventListener("scroll", () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.add("visible");
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const icon = themeToggle.querySelector('i');
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                if (icon) icon.classList.replace('fa-sun', 'fa-moon');
             } else {
-                backToTopButton.classList.remove("visible");
+                localStorage.setItem('theme', 'light');
+                if (icon) icon.classList.replace('fa-moon', 'fa-sun');
             }
         });
+    }
 
-        backToTopButton.addEventListener("click", (e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: "smooth" });
+    // Mobile Menu
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
         });
+    }
 
-        // Search Modal
-        const searchToggle = document.getElementById("searchToggle");
-        const searchModal = document.getElementById("searchModal");
-        const closeSearch = document.getElementById("closeSearch");
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#' || !targetId.startsWith('#')) return;
 
-        searchToggle.addEventListener("click", () => {
-            searchModal.style.display = "flex";
-        });
-
-        closeSearch.addEventListener("click", () => {
-            searchModal.style.display = "none";
-        });
-
-        window.addEventListener("click", (e) => {
-            if (e.target === searchModal) {
-                searchModal.style.display = "none";
-            }
-        });
-
-        // Scroll Animation
-        const fadeElements = document.querySelectorAll(".fade-in");
-
-        const fadeInOnScroll = () => {
-            fadeElements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 150;
-                
-                if (elementTop < window.innerHeight - elementVisible) {
-                    element.classList.add("visible");
+            const target = document.querySelector(targetId);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu if open
+                if (navMenu && navMenu.classList.contains('active')) {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
                 }
-            });
-        };
-
-        window.addEventListener("scroll", fadeInOnScroll);
-        window.addEventListener("load", fadeInOnScroll);
-
-        // News Ticker Animation
-        const tickerContent = document.querySelector(".ticker-content");
-        const tickerItems = document.querySelectorAll(".ticker-item");
-        
-        // Duplicate items for seamless animation
-        tickerItems.forEach(item => {
-            const clone = item.cloneNode(true);
-            tickerContent.appendChild(clone);
+            }
         });
+    });
+
+    // Modal Toggle
+    const loginBtn = document.getElementById('loginBtn');
+    const loginModal = document.getElementById('loginModal');
+    const newsletterBtn = document.getElementById('newsletterBtn');
+    const newsletterModal = document.getElementById('newsletterModal');
+    const closeBtns = document.querySelectorAll('.close-modal');
+
+    const openModal = (modal) => {
+        if (modal) {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    };
+
+    const closeModal = (modal) => {
+        if (modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    };
+
+    if (loginBtn) {
+        loginBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal(loginModal);
+        });
+    }
+
+    if (newsletterBtn) {
+        newsletterBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal(newsletterModal);
+        });
+    }
+
+    closeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            closeModal(btn.closest('.modal'));
+        });
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target.classList.contains('modal')) {
+            closeModal(e.target);
+        }
+    });
+
+    // Form Submissions
+    const newsletterForms = document.querySelectorAll('.newsletter-form, #modalNewsletterForm');
+    newsletterForms.forEach(form => {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const emailInput = form.querySelector('input[type="email"]');
+            if (emailInput && emailInput.value) {
+                alert(`Thank you for subscribing with: ${emailInput.value}`);
+                form.reset();
+                closeModal(form.closest('.modal'));
+            }
+        });
+    });
+
+    // Back to Top
+    const backToTop = document.getElementById('backToTop');
+    if (backToTop) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('active');
+            } else {
+                backToTop.classList.remove('active');
+            }
+        });
+    }
+
+    // Scroll Animations (Fade In)
+    const observerOptions = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in, .large-news-card, .news-card-small, .popular-item, .section-header').forEach(el => {
+        el.classList.add('fade-in');
+        observer.observe(el);
+    });
+
+    // Password Toggle
+    const togglePassword = document.querySelector('.toggle-password');
+    const passwordInput = document.querySelector('.password-wrapper input');
+    if (togglePassword && passwordInput) {
+        togglePassword.addEventListener('click', () => {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            togglePassword.classList.toggle('fa-eye');
+            togglePassword.classList.toggle('fa-eye-slash');
+        });
+    }
+
+    // Ticker Loop
+    const tickerContent = document.querySelector('.ticker-content');
+    if (tickerContent && !tickerContent.dataset.cloned) {
+        tickerContent.innerHTML += tickerContent.innerHTML;
+        tickerContent.dataset.cloned = "true";
+    }
+});

@@ -1,123 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GlobalPulse | World News & Magazine</title>
+    <title>Daily News | All voices matter</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">   
 </head>
+
 <body>
     <!-- Header -->
     <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-left">
+                    <span id="currentDate">Monday, March 02, 2026</span>
+                </div>
+                <div class="top-bar-right">
+                    <a href="#" id="loginBtn"><i class="far fa-user"></i> Sign In</a>
+                    <button class="subscribe-btn" id="newsletterBtn">Subscribe Now</button>
+                    <button class="theme-toggle-btn" id="themeToggle"><i class="fas fa-sun"></i></button>
+                </div>
+            </div>
+        </div>
         <div class="container header-container">
-            <a href="#" class="logo">Global<span>Pulse</span></a>
-            
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div class="main-header">
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <a href="#" class="logo">Daily News <span>All voices matter</span></a>
             </div>
-            
+
             <ul class="nav-menu">
-                <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
-                <li class="nav-item"><a href="#news" class="nav-link"><i class="fas fa-newspaper"></i> News</a></li>
-                <li class="nav-item"><a href="#tech" class="nav-link"><i class="fas fa-microchip"></i> Tech</a></li>
-                <li class="nav-item"><a href="#business" class="nav-link"><i class="fas fa-chart-line"></i> Business</a></li>
-                <li class="nav-item"><a href="#sports" class="nav-link"><i class="fas fa-running"></i> Sports</a></li>
-                <li class="nav-item"><a href="#entertainment" class="nav-link"><i class="fas fa-film"></i> Entertainment</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#culture" class="nav-link">Culture</a></li>
+                <li class="nav-item"><a href="#economy" class="nav-link">Economy</a></li>
+                <li class="nav-item"><a href="#politics" class="nav-link">Politics</a></li>
+                <li class="nav-item"><a href="#science" class="nav-link">Science</a></li>
+                <li class="nav-item"><a href="#tech" class="nav-link">Technology</a></li>
+                <li class="nav-item"><a href="#travel" class="nav-link">Travel</a></li>
+                <li class="nav-item"><a href="#world" class="nav-link">World</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-search"></i></a></li>
             </ul>
-            
-            <div class="header-actions">
-                <button class="search-btn" id="searchToggle"><i class="fas fa-search"></i></button>
-                
-                <label class="theme-toggle">
-                    <input type="checkbox" id="themeToggle">
-                    <span class="theme-slider"></span>
-                </label>
-                
-                <button class="subscribe-btn">Subscribe</button>
-            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container hero-content">
-            <h1>Stay Informed with Global Pulse</h1>
-            <p>Your trusted source for world news, technology updates, business insights, and entertainment news from around the globe.</p>
-            <div class="hero-btns">
-                <a href="#news" class="btn btn-primary">Explore Latest News</a>
-                <a href="#subscribe" class="btn btn-outline">Subscribe Now</a>
+        <div class="container hero-grid-layout">
+            <div class="main-hero-news">
+                <span class="tag-exclusive">FEATURED STORY</span>
+                <h1>Bulvinar Neque Laoreet Suspendisse Interdum</h1>
+                <p>Explore the intricate balance of modern urban design and sustainable living in our latest exclusive
+                    feature report for March 2026.</p>
+                <div class="hero-btns">
+                    <a href="#news" class="btn btn-primary">Read Full Story</a>
+                    <a href="#subscribe" class="btn btn-outline">Subscribe Now</a>
+                </div>
+
+                <!-- Hero Bottom Bar (Sub-News) -->
+                <div class="hero-bottom-news">
+                    <div class="hero-sub-item">
+                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                            alt="Tech">
+                        <p>Economy vs Innovation: The Tech Shift</p>
+                    </div>
+                    <div class="hero-sub-item">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                            alt="Space">
+                        <p>Mars Colony Update: Year 2026</p>
+                    </div>
+                    <div class="hero-sub-item">
+                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                            alt="Business">
+                        <p>Global Trade: A New Era Begins</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-trending">
+                <div class="trending-header">
+                    <h3><i class="fas fa-chart-line"></i> TRENDING NOW</h3>
+                </div>
+                <div class="trending-list">
+                    <div class="trending-item">
+                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+                            alt="Robotics">
+                        <div class="trending-info">
+                            <h4>The Rise of Household Robotics</h4>
+                            <span>5 mins read</span>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+                            alt="Market">
+                        <div class="trending-info">
+                            <h4>Crypto Regulations In 2026</h4>
+                            <span>8 mins read</span>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+                            alt="Work">
+                        <div class="trending-info">
+                            <h4>Future of Remoteness</h4>
+                            <span>4 mins read</span>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <img src="https://images.unsplash.com/photo-1496065187959-7f07b8353c55?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+                            alt="Bio">
+                        <div class="trending-info">
+                            <h4>Bio-Tech Breakthroughs</h4>
+                            <span>10 mins read</span>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+                            alt="Skill">
+                        <div class="trending-info">
+                            <h4>Top Skills for this Decade</h4>
+                            <span>6 mins read</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <svg class="hero-illustration" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-            <path d="M400,300 Q450,250 400,200 Q350,150 400,100 L400,300 Z" fill="rgba(255,255,255,0.1)" />
-            <path d="M300,350 Q350,300 300,250 Q250,200 300,150 L300,350 Z" fill="rgba(255,255,255,0.1)" />
-        </svg>
     </section>
 
     <!-- News Ticker -->
     <div class="news-ticker">
         <div class="ticker-content">
-            <div class="ticker-item"><i class="fas fa-bolt"></i> Breaking: Global leaders gather for climate summit</div>
-            <div class="ticker-item"><i class="fas fa-bolt"></i> Tech giant announces breakthrough in quantum computing</div>
-            <div class="ticker-item"><i class="fas fa-bolt"></i> Stock markets reach all-time high amid economic recovery</div>
+            <div class="ticker-item"><i class="fas fa-bolt"></i> Breaking: Global leaders gather for climate summit
+            </div>
+            <div class="ticker-item"><i class="fas fa-bolt"></i> Tech giant announces breakthrough in quantum computing
+            </div>
+            <div class="ticker-item"><i class="fas fa-bolt"></i> Stock markets reach all-time high amid economic
+                recovery</div>
             <div class="ticker-item"><i class="fas fa-bolt"></i> Major sports event announced for next year</div>
             <div class="ticker-item"><i class="fas fa-bolt"></i> New study reveals benefits of Mediterranean diet</div>
         </div>
     </div>
 
-    <!-- Featured News -->
-    <section class="featured-news" id="news">
-        <div class="container">
-            <div class="section-title">
-                <h2>Featured Stories</h2>
+    <!-- Breaking & Popular News Section -->
+    <section class="content-section">
+        <div class="container main-grid">
+            <div class="breaking-news">
+                <div class="section-header">
+                    <h2>Breaking News</h2>
+                </div>
+                <div class="large-news-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                            alt="Artificial Intelligence">
+                        <span class="tag-tech">TECHNOLOGY</span>
+                    </div>
+                    <div class="card-details">
+                        <h3>Artificial Intelligence is Transforming the Global Job Market in 2026</h3>
+                        <p>A comprehensive report shows how AI integration across industries is creating new roles while
+                            demanding a shift in traditional skill sets for workers worldwide.</p>
+                        <div class="card-meta">
+                            <span><i class="far fa-user"></i> David Mitchell</span>
+                            <span><i class="far fa-calendar"></i> March 02, 2026</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <div class="featured-grid">
-                <div class="news-card fade-in">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Politics">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-category">Politics</span>
-                        <h3 class="card-title">Global Leaders Discuss Climate Change at International Summit</h3>
-                        <p class="card-excerpt">World leaders gather to negotiate new targets for carbon emission reductions and sustainable energy initiatives.</p>
-                        <div class="card-meta">
-                            <span><i class="far fa-user"></i> John Smith</span>
-                            <span><i class="far fa-clock"></i> 2 hours ago</span>
+
+            <div class="popular-news">
+                <div class="section-header">
+                    <h2>Trending Now</h2>
+                </div>
+                <div class="popular-list">
+                    <div class="popular-item">
+                        <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                            alt="Travel">
+                        <div class="popular-info">
+                            <span class="tag-travel">TRAVEL</span>
+                            <h4>The Rise of Sustainable Tourism in Remote Destinations</h4>
+                            <span>2 hours ago</span>
                         </div>
                     </div>
-                </div>
-                
-                <div class="news-card fade-in">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Technology">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-category">Technology</span>
-                        <h3 class="card-title">AI Revolution: How Machine Learning is Transforming Industries</h3>
-                        <p class="card-excerpt">From healthcare to finance, artificial intelligence is reshaping how businesses operate and deliver value.</p>
-                        <div class="card-meta">
-                            <span><i class="far fa-user"></i> Sarah Johnson</span>
-                            <span><i class="far fa-clock"></i> 5 hours ago</span>
+                    <div class="popular-item">
+                        <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                            alt="Economy">
+                        <div class="popular-info">
+                            <span class="tag-economy">ECONOMY</span>
+                            <h4>Central Banks Signal Shift in Interest Rate Policies</h4>
+                            <span>5 hours ago</span>
                         </div>
                     </div>
-                </div>
-                
-                <div class="news-card fade-in">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Economy">
+                    <div class="popular-item">
+                        <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                            alt="Science">
+                        <div class="popular-info">
+                            <span class="tag-science">SCIENCE</span>
+                            <h4>Breakthrough in Clean Fusion Energy Research Announced</h4>
+                            <span>8 hours ago</span>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <span class="card-category">Economy</span>
-                        <h3 class="card-title">Global Markets Respond to New Economic Policies</h3>
-                        <p class="card-excerpt">Stock markets worldwide show volatility as governments implement new fiscal measures to address inflation concerns.</p>
-                        <div class="card-meta">
-                            <span><i class="far fa-user"></i> Michael Chen</span>
-                            <span><i class="far fa-clock"></i> 1 day ago</span>
+                    <div class="popular-item">
+                        <img src="https://images.unsplash.com/photo-1518546305927-5a555bb7020d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                            alt="Popular">
+                        <div class="popular-info">
+                            <span class="tag-travel">TRAVEL</span>
+                            <h4>Sodales on the world in loremsa</h4>
+                            <span>Nov 14, 2023</span>
                         </div>
                     </div>
                 </div>
@@ -125,228 +221,173 @@
         </div>
     </section>
 
-    <!-- Technology Section -->
-    <section class="category-section" id="tech">
-        <div class="container">
-            <div class="category-header">
-                <h2 class="category-title"><i class="fas fa-microchip"></i> Technology & Innovation</h2>
-                <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
-            </div>
-            
-            <div class="news-grid">
-                <div class="large-card news-card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1677442135135-416f8aa26a5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="AI Technology">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-category">Artificial Intelligence</span>
-                        <h3 class="card-title">ChatGPT-5: What to Expect from the Next Generation AI</h3>
-                        <p class="card-excerpt">OpenAI announces development of their most advanced language model yet, promising revolutionary capabilities in natural language understanding.</p>
-                        <div class="card-meta">
-                            <span><i class="far fa-user"></i> Emma Wilson</span>
-                            <span><i class="far fa-clock"></i> 3 hours ago</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="news-card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cybersecurity">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-category">Cybersecurity</span>
-                        <h3 class="card-title">New Cybersecurity Threats Emerge in 2023</h3>
-                        <p class="card-excerpt">Security experts warn about sophisticated phishing attacks targeting remote workers and critical infrastructure.</p>
-                        <div class="card-meta">
-                            <span><i class="far fa-user"></i> David Kim</span>
-                            <span><i class="far fa-clock"></i> 1 day ago</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="news-card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gadgets">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-category">Gadgets</span>
-                        <h3 class="card-title">Foldable Phones: The Future of Mobile Technology?</h3>
-                        <p class="card-excerpt">With major manufacturers investing in flexible display technology, we examine whether foldable devices are here to stay.</p>
-                        <div class="card-meta">
-                            <span><i class="far fa-user"></i> Lisa Anderson</span>
-                            <span><i class="far fa-clock"></i> 2 days ago</span>
-                        </div>
-                    </div>
+    <!-- App Banner -->
+    <section class="app-banner">
+        <div class="container banner-container">
+            <div class="banner-content">
+                <h2>Download Daily News App</h2>
+                <p>For better experience join our community and download our app from play store & app store.</p>
+                <div class="app-buttons">
+                    <a href="#"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                            alt="App Store"></a>
+                    <a href="#"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                            alt="Google Play"></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Business Section -->
-    <section class="category-section" id="business">
-        <div class="container">
-            <div class="category-header">
-                <h2 class="category-title"><i class="fas fa-chart-line"></i> Business & Finance</h2>
-                <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+    <!-- Editor's Choice Section -->
+    <section class="content-section">
+        <div class="container main-grid">
+            <div class="editors-choice">
+                <div class="section-header">
+                    <h2>Editor's Choice</h2>
+                </div>
+                <div class="news-grid-3">
+                    <div class="news-card-small">
+                        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                            alt="Culture">
+                        <div class="news-inner">
+                            <span class="tag-culture">CULTURE</span>
+                            <h4>How Modern Architecture is Redefining Urban Spaces in 2026</h4>
+                            <p>March 01, 2026</p>
+                        </div>
+                    </div>
+                    <div class="news-card-small">
+                        <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                            alt="Economy">
+                        <div class="news-inner">
+                            <span class="tag-economy">ECONOMY</span>
+                            <h4>Global Supply Chains Face New Challenges Amid Trade Shifts</h4>
+                            <p>Feb 28, 2026</p>
+                        </div>
+                    </div>
+                    <div class="news-card-small">
+                        <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                            alt="Politics">
+                        <div class="news-inner">
+                            <span class="tag-politics">POLITICS</span>
+                            <h4>Upcoming Elections: What to Expect in the Next Decade</h4>
+                            <p>Feb 27, 2026</p>
+                        </div>
+                    </div>
+                    <div class="news-card-small">
+                        <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                            alt="World">
+                        <div class="news-inner">
+                            <span class="tag-world">WORLD</span>
+                            <h4>Diplomatic Efforts Intensify Over Arctic Resource Access</h4>
+                            <p>Feb 26, 2026</p>
+                        </div>
+                    </div>
+                    <div class="news-card-small">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                            alt="Culture">
+                        <div class="news-inner">
+                            <span class="tag-culture">CULTURE</span>
+                            <h4>The Evolution of Digital Art in the Age of AI Creativity</h4>
+                            <p>Feb 25, 2026</p>
+                        </div>
+                    </div>
+                    <div class="news-card-small">
+                        <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                            alt="Travel">
+                        <div class="news-inner">
+                            <span class="tag-travel">TRAVEL</span>
+                            <h4>Hidden Gems: Exploring Europe's Least Visited Villages</h4>
+                            <p>Feb 24, 2026</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <div class="news-grid">
-                <div class="news-card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Stock Market">
+
+            <!-- Triple Category Section (NEW) -->
+            <div class="triple-category-grid">
+                <!-- Word News -->
+                <div class="category-col">
+                    <div class="section-header">
+                        <h2>World</h2>
                     </div>
-                    <div class="card-content">
-                        <span class="card-category">Markets</span>
-                        <h3 class="card-title">Stock Market Update: Tech Stocks Lead Rally</h3>
-                        <p class="card-excerpt">Major indices climb as technology companies report stronger than expected quarterly earnings.</p>
-                        <div class="card-meta">
-                            <span><i class="far fa-user"></i> Robert Williams</span>
-                            <span><i class="far fa-clock"></i> 4 hours ago</span>
-                        </div>
+                    <div class="cat-featured">
+                        <img src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                            alt="World">
+                        <h4>Global Summit: Zero Carbon Goals for 2030</h4>
                     </div>
+                    <ul class="cat-list">
+                        <li><a href="#">Arctic melting accelerates faster than predicted</a></li>
+                        <li><a href="#">New trade routes open in Southeast Asia</a></li>
+                        <li><a href="#">Diplomatic shift in South American council</a></li>
+                    </ul>
                 </div>
-                
-                <div class="news-card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Startup">
+
+                <!-- Economy -->
+                <div class="category-col">
+                    <div class="section-header">
+                        <h2>Economy</h2>
                     </div>
-                    <div class="card-content">
-                        <span class="card-category">Startups</span>
-                        <h3 class="card-title">Fintech Startup Raises $50M in Series B Funding</h3>
-                        <p class="card-excerpt">The investment will fuel international expansion and development of new AI-powered financial tools.</p>
-                        <div class="card-meta">
-                            <span><i class="far fa-user"></i> Jennifer Lee</span>
-                            <span><i class="far fa-clock"></i> 1 day ago</span>
-                        </div>
+                    <div class="cat-featured">
+                        <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                            alt="Economy">
+                        <h4>Digital Currency: The End of Physical Cash?</h4>
                     </div>
+                    <ul class="cat-list">
+                        <li><a href="#">Stock markets stabilize after quarterly reports</a></li>
+                        <li><a href="#">Interest rates to remain steady until June</a></li>
+                        <li><a href="#">Real estate market trends: Suburban boom</a></li>
+                    </ul>
                 </div>
-                
-                <div class="large-card news-card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Crypto">
+
+                <!-- Culture -->
+                <div class="category-col">
+                    <div class="section-header">
+                        <h2>Culture</h2>
                     </div>
-                    <div class="card-content">
-                        <span class="card-category">Cryptocurrency</span>
-                        <h3 class="card-title">Bitcoin Surges as Institutional Adoption Increases</h3>
-                        <p class="card-excerpt">Major financial institutions announce new cryptocurrency services, driving increased mainstream adoption.</p>
-                        <div class="card-meta">
-                            <span><i class="far fa-user"></i> Mark Taylor</span>
-                            <span><i class="far fa-clock"></i> 2 days ago</span>
-                        </div>
+                    <div class="cat-featured">
+                        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                            alt="Culture">
+                        <h4>The Revival of Traditional Crafts in 2026</h4>
                     </div>
+                    <ul class="cat-list">
+                        <li><a href="#">Film Festival: Independent voices dominate</a></li>
+                        <li><a href="#">Museum of Future opens in heart of London</a></li>
+                        <li><a href="#">Culinary trends: The year of fermented food</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sports Section -->
-    <section class="category-section" id="sports">
-        <div class="container">
-            <div class="category-header">
-                <h2 class="category-title"><i class="fas fa-running"></i> Sports & Entertainment</h2>
-                <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
-            </div>
-            
-            <div class="news-grid">
-                <div class="large-card news-card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Football">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-category">Football</span>
-                        <h3 class="card-title">Champions League Final: Preview and Predictions</h3>
-                        <p class="card-excerpt">Experts analyze the upcoming match between two European giants, with the trophy on the line.</p>
-                        <div class="card-meta">
-                            <span><i class="far fa-user"></i> Alex Morgan</span>
-                            <span><i class="far fa-clock"></i> 6 hours ago</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="news-card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1628890920690-9e29d0019b9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cricket">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-category">Cricket</span>
-                        <h3 class="card-title">Pakistan Super League: Season Highlights</h3>
-                        <p class="card-excerpt">Recapping the most exciting moments from this year's tournament, including record-breaking performances.</p>
-                        <div class="card-meta">
-                            <span><i class="far fa-user"></i> Rahul Sharma</span>
-                            <span><i class="far fa-clock"></i> 1 day ago</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="news-card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Entertainment">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-category">Entertainment</span>
-                        <h3 class="card-title">New Blockbuster Movie Breaks Box Office Records</h3>
-                        <p class="card-excerpt">The latest installment in the popular franchise surpasses expectations with its opening weekend performance.</p>
-                        <div class="card-meta">
-                            <span><i class="far fa-user"></i> Sophia Martinez</span>
-                            <span><i class="far fa-clock"></i> 2 days ago</span>
-                        </div>
-                    </div>
+    <!-- Large Video Section -->
+    <section class="video-section">
+        <div class="container video-grid">
+            <div class="video-main">
+                <span class="tag-exclusive">EXCLUSIVE REPORT</span>
+                <h2>Journey Inside the World's First Underwater Research Station</h2>
+                <p>Go beneath the waves with our special documentary team as they explore the groundbreaking Aquarius II
+                    project, where scientists are living and working to unlock the secrets of our oceans.</p>
+                <div class="play-btn">
+                    <i class="fas fa-play"></i> START WATCHING (15:42)
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Trending Section -->
-    <section class="trending-section">
-        <div class="container trending-container">
-            <div class="trending-news">
-                <div class="category-header">
-                    <h2 class="category-title"><i class="fas fa-fire"></i> Trending Now</h2>
+            <div class="video-sidebar">
+                <div class="video-thumb">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                        alt="Tech Video">
+                    <i class="fas fa-play-circle"></i>
                 </div>
-                
-                <ul class="trending-list">
-                    <li class="trending-item">
-                        <div class="trending-number">01</div>
-                        <div class="trending-content">
-                            <h3>Global Climate Summit Reaches Historic Agreement</h3>
-                            <p>World leaders commit to ambitious carbon reduction targets by 2030</p>
-                        </div>
-                    </li>
-                    <li class="trending-item">
-                        <div class="trending-number">02</div>
-                        <div class="trending-content">
-                            <h3>Tech Giant Unveils Revolutionary AR Glasses</h3>
-                            <p>New wearable technology promises to transform how we interact with digital content</p>
-                        </div>
-                    </li>
-                    <li class="trending-item">
-                        <div class="trending-number">03</div>
-                        <div class="trending-content">
-                            <h3>Major Breakthrough in Renewable Energy Storage</h3>
-                            <p>New battery technology could make solar and wind power more reliable</p>
-                        </div>
-                    </li>
-                    <li class="trending-item">
-                        <div class="trending-number">04</div>
-                        <div class="trending-content">
-                            <h3>World Health Organization Announces End of Pandemic</h3>
-                            <p>After three years, the global health emergency is officially declared over</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="trending-sidebar">
-                <div class="category-header">
-                    <h2 class="category-title"><i class="fas fa-video"></i> Featured Video</h2>
+                <div class="video-thumb">
+                    <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                        alt="Robotics Video">
+                    <i class="fas fa-play-circle"></i>
                 </div>
-                
-                <div class="video-container" style="background-color: #ddd; height: 250px; display: flex; align-items: center; justify-content: center; border-radius: var(--radius); margin-bottom: 20px;">
-                    <i class="fas fa-play-circle" style="font-size: 60px; color: var(--secondary);"></i>
+                <div class="video-thumb">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                        alt="IT Video">
+                    <i class="fas fa-play-circle"></i>
                 </div>
-                
-                <h3 style="margin-bottom: 15px;">Interview with Tech Entrepreneur on Future of AI</h3>
-                <p>Exclusive conversation with the CEO of a leading AI research company about the future of artificial intelligence.</p>
             </div>
         </div>
     </section>
@@ -356,7 +397,7 @@
         <div class="container">
             <h2>Subscribe to Our Newsletter</h2>
             <p>Stay updated with the latest news and insights from around the world. Delivered daily to your inbox.</p>
-            
+
             <form class="newsletter-form">
                 <input type="email" class="newsletter-input" placeholder="Enter your email address">
                 <button type="submit" class="newsletter-btn">Subscribe</button>
@@ -368,52 +409,53 @@
     <footer>
         <div class="container footer-container">
             <div class="footer-col">
-                <h3>GlobalPulse</h3>
-                <p>Your trusted source for world news, technology updates, business insights, and entertainment news from around the globe.</p>
-                
+                <a href="#" class="logo footer-logo">Daily News <span>All voices matter</span></a>
+                <p>The premier source for international news, technology updates, business insights, and more since
+                    1851.</p>
+
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
-            
+
             <div class="footer-col">
                 <h3>Categories</h3>
                 <ul>
-                    <li><a href="#news"><i class="fas fa-arrow-right"></i> World News</a></li>
-                    <li><a href="#tech"><i class="fas fa-arrow-right"></i> Technology</a></li>
-                    <li><a href="#business"><i class="fas fa-arrow-right"></i> Business</a></li>
-                    <li><a href="#sports"><i class="fas fa-arrow-right"></i> Sports</a></li>
-                    <li><a href="#entertainment"><i class="fas fa-arrow-right"></i> Entertainment</a></li>
+                    <li><a href="#">Culture</a></li>
+                    <li><a href="#">Economy</a></li>
+                    <li><a href="#">Politics</a></li>
+                    <li><a href="#">Science</a></li>
+                    <li><a href="#">Technology</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-col">
-                <h3>Quick Links</h3>
+                <h3>Information</h3>
                 <ul>
-                    <li><a href="#"><i class="fas fa-arrow-right"></i> About Us</a></li>
-                    <li><a href="#"><i class="fas fa-arrow-right"></i> Contact Us</a></li>
-                    <li><a href="#"><i class="fas fa-arrow-right"></i> Privacy Policy</a></li>
-                    <li><a href="#"><i class="fas fa-arrow-right"></i> Terms of Service</a></li>
-                    <li><a href="#"><i class="fas fa-arrow-right"></i> Editorial Guidelines</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Our Team</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-col">
-                <h3>Contact Info</h3>
+                <h3>Company</h3>
                 <ul>
-                    <li><i class="fas fa-map-marker-alt"></i> 123 News Street, New York, NY</li>
-                    <li><i class="fas fa-phone"></i> +1 (123) 456-7890</li>
-                    <li><i class="fas fa-envelope"></i> info@globalpulse.com</li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Press</a></li>
                 </ul>
             </div>
         </div>
-        
+
         <div class="copyright">
-            <p>&copy; 2025 GlobalPulse. All Rights Reserved. Designed & Developed by <strong>Shahar Yar</strong>.</p>
+            <p>&copy; 2026 Daily News. All Rights Reserved. Designed & Developed by <strong>Shahar Yar</strong>.</p>
         </div>
     </footer>
 
@@ -422,19 +464,55 @@
         <i class="fas fa-arrow-up"></i>
     </a>
 
-    <!-- Search Modal -->
-    <div class="modal" id="searchModal">
-        <div class="modal-content">
-            <span class="close-modal" id="closeSearch">&times;</span>
-            <h2>Search GlobalPulse</h2>
-            <form class="search-form">
-                <input type="text" class="search-input" placeholder="Enter search terms...">
-                <button type="submit" class="search-submit">Search</button>
+    <!-- Modals -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content login-modal-layout">
+            <span class="close-modal">&times;</span>
+            <form class="login-form">
+                <div class="form-group">
+                    <label>Username or Email Address</label>
+                    <input type="text">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <div class="password-wrapper">
+                        <input type="password">
+                        <i class="far fa-eye toggle-password"></i>
+                    </div>
+                </div>
+                <div class="form-footer">
+                    <label class="remember-me">
+                        <input type="checkbox"> Remember Me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn btn-primary login-btn">Log In</button>
             </form>
         </div>
     </div>
 
-  
+    <div id="newsletterModal" class="modal">
+        <div class="modal-content newsletter-modal-layout">
+            <span class="close-modal">&times;</span>
+            <div class="modal-split">
+                <div class="modal-image">
+                    <img src="https://images.unsplash.com/photo-1514565131-fce0801e578c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        alt="Urban Life">
+                </div>
+                <div class="modal-body">
+                    <h2>Newsletter Subscribe</h2>
+                    <p>Enter your email address below and subscribe to our newsletter</p>
+                    <form id="modalNewsletterForm">
+                        <input type="text" placeholder="Your name">
+                        <input type="email" placeholder="Your email *" required>
+                        <button type="submit" class="btn btn-primary subscribe-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="js/script.js"></script>
 </body>
+
 </html>
